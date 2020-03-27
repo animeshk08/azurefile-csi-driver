@@ -21,7 +21,7 @@ spec:
         - operator: "Exists"
       containers:
         - name: liveness-probe
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           volumeMounts:
             - mountPath: /csi
               name: socket-dir
@@ -39,6 +39,7 @@ spec:
               cpu: 10m
               memory: 20Mi
         - name: node-driver-registrar
+          imagePullPolicy: IfNotPresent
           image: mcr.microsoft.com/oss/kubernetes-csi/csi-node-driver-registrar:v1.2.0
           args:
             - --csi-address=$(ADDRESS)
@@ -93,7 +94,7 @@ spec:
                 fieldRef:
                   apiVersion: v1
                   fieldPath: spec.nodeName
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           securityContext:
             privileged: true
           volumeMounts:
@@ -140,4 +141,3 @@ spec:
             path: /dev
             type: Directory
           name: device-dir
----
