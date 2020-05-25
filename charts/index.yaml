@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  azurefile-csi-driver:
+  - apiVersion: v1
+    appVersion: latest
+    created: "2020-05-26T18:43:09.996852691+05:30"
+    description: Azure File Container Storage Interface (CSI) Storage Plugin
+    digest: 1d06ba3e14bcc00e59ad8959b2ab696e9f4aa8e1fabb57a202fc2dec43dd68fd
+    name: azurefile-csi-driver
+    urls:
+    - https://raw.githubusercontent.com/animeshk08/azurefile-csi-driver/helm-update/charts/latest/azurefile-csi-driver-latest.tgz
+    version: latest
+generated: "2020-05-26T18:43:09.996411054+05:30"
